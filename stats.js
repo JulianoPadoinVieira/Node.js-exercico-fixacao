@@ -1,6 +1,9 @@
 //importa o módulo OS
 const os = require('os');
 
+//importa a funçãod e outro módulo
+const log = require('./logger');
+
 setInterval(() => {
     //Estratégia de desestruturação
     //  const freemem = os.freemem
@@ -20,6 +23,8 @@ setInterval(() => {
     console.clear();
     console.log('===== PC Stats =====');
     console.table(stats);
+
+    log(`${JSON.stringify(stats)}\n`)
 
 
 
